@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3699
+  controlID: 34
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 3700
+  controlID: 35
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,8 +244,8 @@ MonoBehaviour:
     y: 0
     width: 221.59998
     height: 722.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -377,9 +377,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 6a600000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6c55ffff7857ffff2663ffff106bffffbaa9ffff86b0ffff7eb8fffff6d7ffff68dfffff38fbffffb25a0000845b0000885f0000c8750000
+      m_ExpandedIDs: 14fbffffde5a0000b45b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -436,8 +436,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -101, y: -26}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -476,11 +476,11 @@ MonoBehaviour:
       index: 1
       layout: 1
     - dockPosition: 0
-      containerId: overlay-toolbar__left
+      containerId: overlay-container--left
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25.599998}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -628,9 +628,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -16.121447, y: 11.115102, z: -18.404625}
+    m_Target: {x: -9.842104, y: 14.8089695, z: -54.56702}
     speed: 2
-    m_Value: {x: -16.121447, y: 11.115102, z: -18.404625}
+    m_Value: {x: -9.842104, y: 14.8089695, z: -54.56702}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -677,13 +677,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.51
   m_Rotation:
-    m_Target: {x: 0.18203366, y: 0.05099159, z: -0.009432166, w: 0.98195946}
+    m_Target: {x: -0.15936418, y: 0.04354045, z: -0.0070200167, w: -0.98627687}
     speed: 2
-    m_Value: {x: 0.18202733, y: 0.050989818, z: -0.009431837, w: 0.9819253}
+    m_Value: {x: -0.16082585, y: 0.045006987, z: -0.0073262807, w: -0.98592895}
   m_Size:
-    m_Target: 82.66486
+    m_Target: 22.972458
     speed: 2
-    m_Value: 82.66486
+    m_Value: 22.972458
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -749,21 +749,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages
+    - Assets/3D Low Poly Worlds/Forest/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\ACER\Documents\Proyectos Unity\Happyland
+  m_LastProjectPath: C:\Users\ACER\Documents\Proyectos Unity\The-Daily-Bugle\Happyland
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f4ed1400
     m_LastClickedID: 1371636
-    m_ExpandedIDs: ffffffff000000009e620000a0620000a2620000a4620000d6620000e26200002663000028630000
+    m_ExpandedIDs: 00000000ee620000f0620000f2620000f4620000f6620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,7 +791,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000009e620000a2620000a4620000d662000024630000
+    m_ExpandedIDs: ffffffff00000000ee620000f0620000f4620000f662000028630000326300009c66000030680000be6b0000c26c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -194,4 +194,13 @@ public class Player : MonoBehaviour
             playerLife = 100f;
         }
     }
+
+    public void RemoveHealth(float heal)
+    {
+        playerLife = playerLife - heal;
+        if (playerLife == 0)
+        {   
+            Debug.Log("GAME OVER");
+        }
+    }
 }

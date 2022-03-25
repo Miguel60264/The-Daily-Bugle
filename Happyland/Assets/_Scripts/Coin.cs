@@ -6,7 +6,6 @@ public class Coin : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _coinPickUpSound;
-
     
     public void OnTriggerStay(Collider other)
     {
@@ -19,7 +18,7 @@ public class Coin : MonoBehaviour
                 { 
                    player.hasCoin=true; 
                    AudioSource.PlayClipAtPoint(_coinPickUpSound, transform.position, 1f);
-                    Destroy(this.gameObject);
+                   Destroy(this.gameObject);
 
                 }
           }

@@ -15925,19 +15925,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1744407837024274, guid: 2f3e352268bf84b45acf0d56b0b89518, type: 3}
   m_PrefabInstance: {fileID: 881936107}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &920177721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920177720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8db440abcc3627345b8917f846717980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _heartPickUpSound: {fileID: 0}
 --- !u!135 &920177722
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15951,6 +15938,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.42561245
   m_Center: {x: -0.01, y: 0, z: 0}
+--- !u!114 &920177726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920177720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12fefc03eb9682d46bf8a0f475f15213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _potionSound: {fileID: 8300000, guid: 1c271962973b0bf4a868bc40212dd36a, type: 3}
+  healthQTY: 5
 --- !u!1001 &921635272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29815,6 +29816,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6858829876264650829, guid: aec47a5e1f851dc40b76b569e4a8dab6, type: 3}
+      propertyPath: playerLife
+      value: 95
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aec47a5e1f851dc40b76b569e4a8dab6, type: 3}
 --- !u!1001 &1674917525
@@ -37129,7 +37134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4250044268879966, guid: 937e9c32396257a4a9ab472491ad7601, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.77
+      value: 3.39
       objectReference: {fileID: 0}
     - target: {fileID: 4250044268879966, guid: 937e9c32396257a4a9ab472491ad7601, type: 3}
       propertyPath: m_LocalPosition.z

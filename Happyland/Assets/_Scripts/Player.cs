@@ -184,5 +184,14 @@ public class Player : MonoBehaviour
             weaponActive = false;
         }
 
-    }    
+    }
+
+    public void AddHealth(float heal)
+    {
+        playerLife = playerLife + heal;
+        if (playerLife > 100)
+        {
+            playerLife = 100f;
+        }
+    }
 }

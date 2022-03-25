@@ -5,24 +5,19 @@ using UnityEngine;
 public class Potion : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip _potionPickUpSound;
+    private AudioClip _potionSound;
 
+    [SerializeField]
+    private float healthQTY = 5.0f;
 
-    public void OnTriggerStay(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Player player = other.GetComponent<Player>();
-                if (player != null)
-                {
-                    player.hasCoin = true;
-                    AudioSource.PlayClipAtPoint(_potionPickUpSound, transform.position, 1f);
-                    Destroy(this.gameObject);
-
-                }
-            }
+            Player player = other.GetComponent<Player>();
+            player.AddHealth(healthQTY);
+            AudioSource.PlayClipAtPoint(_potionSound, transform.position, 1f);
+            Destroy(this.gameObject);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip _heartPickUpSound;
+    private AudioClip _potionPickUpSound;
 
 
     public void OnTriggerStay(Collider other)
@@ -18,7 +18,7 @@ public class Collectable : MonoBehaviour
                 if (player != null)
                 {
                     player.hasCoin = true;
-                    AudioSource.PlayClipAtPoint(_heartPickUpSound, transform.position, 1f);
+                    AudioSource.PlayClipAtPoint(_potionPickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
 
                 }

@@ -69,8 +69,8 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
     - _CausticCutout: 0.4
-    - _CausticsSpeed: 0.01
-    - _CausticsTiling: 3.52
+    - _CausticsSpeed: 0.001
+    - _CausticsTiling: 3.92
     - _Cutoff: 0.5
     - _Depth: 1
     - _DepthFalloff: 4.55
@@ -93,8 +93,8 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveIntensity: 0.08
-    - _WaveSpeed: 5
+    - _WaveIntensity: 0.2
+    - _WaveSpeed: 6
     - _ZWrite: 1
     m_Colors:
     - _CausticColor: {r: 23.968628, g: 23.968628, b: 23.968628, a: 0}

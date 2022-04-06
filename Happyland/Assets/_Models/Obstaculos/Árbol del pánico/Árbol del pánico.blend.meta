@@ -3,7 +3,22 @@ guid: ea603b2dbb252d54090fb67cad7589fc
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hojas
+    second: {fileID: 2100000, guid: 99f13fe3b5874084781c8cc7677b53b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rostro
+    second: {fileID: 2100000, guid: 70d315e1d11739a4b800f8d9ef9573d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tronco y ramas
+    second: {fileID: 2100000, guid: b2fc8fcb633eea84db5831515a4bb412, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

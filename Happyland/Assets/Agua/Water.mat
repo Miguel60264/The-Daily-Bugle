@@ -68,20 +68,20 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
-    - _CausticCutout: 0.4
-    - _CausticsSpeed: 0.001
-    - _CausticsTiling: 3.92
+    - _CausticCutout: 0.47
+    - _CausticsSpeed: 0.03
+    - _CausticsTiling: 4.31
     - _Cutoff: 0.5
     - _Depth: 1
     - _DepthFalloff: 4.55
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FoamAmount: 0.8
-    - _FoamCutout: 0.13
+    - _FoamAmount: 10.33
+    - _FoamCutout: -3.22
     - _FoamDepth: 2.07
     - _FoamFalloff: 2.7
     - _FoamShoreWidth: -0.76
-    - _FoamTiling: 0.99
+    - _FoamTiling: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -93,17 +93,17 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveIntensity: 0.2
-    - _WaveSpeed: 6
+    - _WaveIntensity: 0.5
+    - _WaveSpeed: 5.5
     - _ZWrite: 1
     m_Colors:
     - _CausticColor: {r: 23.968628, g: 23.968628, b: 23.968628, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
-    - _FoamSpeed: {r: 0, g: 0.01, b: 0, a: 0}
-    - _MainColor: {r: 0.15294118, g: 0.14901961, b: 0.2509804, a: 0}
-    - _ShoreColor: {r: 0, g: 0.39215687, b: 0.4, a: 0}
+    - _FoamSpeed: {r: 0.08, g: 0.08, b: 0, a: 0}
+    - _MainColor: {r: 0.34509805, g: 0.16078432, b: 0.654902, a: 0}
+    - _ShoreColor: {r: 0.5921569, g: 0.16078432, b: 0.654902, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9152429071493381844
 MonoBehaviour:

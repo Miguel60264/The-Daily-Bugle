@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,9 @@ public class Player : MonoBehaviour
 {
     private CharacterController _controller;
 
-    public float playerLife = 100; 
-    
+    private float timeToDie = 0.0f;
+
+    public float playerLife = 100;     
     [SerializeField]
     private float _speed =3.5f;
     [SerializeField]
@@ -38,6 +40,8 @@ public class Player : MonoBehaviour
     public bool knifeActive=false;
 
     public bool weaponActive=true;
+
+    public bool inmunity = false;
 
   
     // Start is called before the first frame update
@@ -95,6 +99,11 @@ public class Player : MonoBehaviour
                 EnableKnife();
 
                 }
+        }
+
+        if (inmunity == true)
+        {
+            GrenadeActivate();
         }
 
     }
@@ -197,10 +206,25 @@ public class Player : MonoBehaviour
 
     public void RemoveHealth(float heal)
     {
-        playerLife = playerLife - heal;
+        //playerLife = playerLife - heal
+        //timeToDie = timeToDie + timeToDie * Time.deltaTime;
+        timeToDie += Time.deltaTime;
+        if (timeToDie >= 5.0f)
+        {
+            playerLife = playerLife - heal;
+            timeToDie = 0.0f;
+            Debug.Log("Time to die: " + timeToDie);
+        }
         if (playerLife == 0)
         {   
             Debug.Log("GAME OVER");
         }
     }
+
+    public void GrenadeActivate()
+    {
+        playerLife = 100;
+        StartCoroutine("TimeToShield");
+    }
+
 }

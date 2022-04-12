@@ -7,9 +7,6 @@ public class Invincible : MonoBehaviour
     [SerializeField]
     private AudioClip _grenadePickUpSound;
 
-    [SerializeField]
-    private float healthQTY = 5.0f;
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -17,7 +14,7 @@ public class Invincible : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Player player = other.GetComponent<Player>();
-                player.AddHealth(healthQTY);
+                player.inmunity = true;
                 AudioSource.PlayClipAtPoint(_grenadePickUpSound, transform.position, 1f);
                 Destroy(this.gameObject);
             }

@@ -8,7 +8,7 @@ public class Potion : MonoBehaviour
     private AudioClip _potionSound;
 
     [SerializeField]
-    private float healthQTY = 5.0f;
+    private float healthQTY = 25.0f;
 
     public void OnTriggerEnter(Collider other)
     {

@@ -8,7 +8,7 @@ public class PoisonousWater : MonoBehaviour
     private AudioClip _lessHealthSound;
 
     [SerializeField]
-    private float healthQTY = 5.0f;
+    private float healthQTY = 15.0f;
 
     public void OnTriggerStay(Collider other)
     {

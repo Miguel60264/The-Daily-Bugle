@@ -224,7 +224,14 @@ public class Player : MonoBehaviour
     public void GrenadeActivate()
     {
         playerLife = 100;
-        StartCoroutine("TimeToShield");
+        StartCoroutine(InvincibleTimeUp());
     }
 
+    IEnumerator InvincibleTimeUp()
+    {
+        yield return new WaitForSeconds(30.0f);
+        Debug.Log("Listo Calisto");
+        inmunity = false;
+        yield return new WaitForSeconds(.1f);
+    }
 }

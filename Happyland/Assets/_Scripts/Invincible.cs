@@ -7,7 +7,7 @@ public class Invincible : MonoBehaviour
     [SerializeField]
     private AudioClip _grenadePickUpSound;
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {

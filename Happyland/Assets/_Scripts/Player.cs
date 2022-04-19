@@ -43,7 +43,8 @@ public class Player : MonoBehaviour
 
     public bool inmunity = false;
 
-  
+    public bool speed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +107,10 @@ public class Player : MonoBehaviour
             GrenadeActivate();
         }
 
+        if (speed == true)
+        {
+            SpeedPotionActivate();
+        }
     }
 
     void Shoot()
@@ -232,6 +237,21 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(30.0f);
         Debug.Log("Listo Calisto");
         inmunity = false;
+        yield return new WaitForSeconds(.1f);
+    }
+
+    public void SpeedPotionActivate()
+    {
+        _speed = 5.5f;
+        StartCoroutine(SpeedPotionTimeUp());
+    }
+
+    IEnumerator SpeedPotionTimeUp()
+    {
+        yield return new WaitForSeconds(20.0f);
+        Debug.Log("Al tok mi rey");
+        speed = false;
+        _speed = 3.5f;
         yield return new WaitForSeconds(.1f);
     }
 }

@@ -19,7 +19,6 @@ public class Coin : MonoBehaviour
                    player.hasCoin=true; 
                    AudioSource.PlayClipAtPoint(_coinPickUpSound, transform.position, 1f);
                    Destroy(this.gameObject);
-
                 }
           }
         }

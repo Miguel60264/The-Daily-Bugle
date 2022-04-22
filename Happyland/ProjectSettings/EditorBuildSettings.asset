@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/StartWindow.unity
     guid: d49fc5912d6bba34a925cf57f9312d6c
   - enabled: 1
-    path: Assets/3D Low Poly Worlds/Forest/Scene/Forest_Scene.unity
+    path: Assets/_Scenes/Forest_Scene.unity
     guid: a6f078be1ad32f34b913bcf0d86c0d1e
+  - enabled: 1
+    path: Assets/_Scenes/GameOverWindow.unity
+    guid: 7f1743b88d94be54db78ace9996deac3
   m_configObjects: {}

@@ -7,12 +7,16 @@ public class IU_Manager : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI _textAmmoText;
-    public GameObject coin;
+    public GameObject maestro;
+    public GameObject gato;
+    public GameObject peluche;
 
     // Start is called before the first frame update
     void Start()
     {
-        coin.SetActive(false);
+        maestro.SetActive(false);
+        gato.SetActive(false);
+        peluche.SetActive(false);
     }
 
     public void UpdateAmmo(int count)
@@ -20,13 +24,23 @@ public class IU_Manager : MonoBehaviour
        _textAmmoText.text = "Ammo: " + count; 
     }
 
-    public void CollectCoin()
+    public void CollectMaestro()
     {
-        coin.SetActive(true);
+        maestro.SetActive(true);
+    }
+
+    public void CollectGato()
+    {
+        gato.SetActive(true);
+    }
+
+    public void CollectPeluche()
+    {
+        peluche.SetActive(true);
     }
 
     public void PaywithCoin()
     {
-        coin.SetActive(false);
+        maestro.SetActive(false);
     }
 }

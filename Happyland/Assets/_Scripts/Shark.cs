@@ -15,7 +15,7 @@ public class Shark : MonoBehaviour
              Debug.Log("Player presiona E");
              
              Player player = collision.GetComponent<Player>();
-             if (player != null && player.hasCoin==true)
+             if (player != null && player.hasMaster == true)
              {
                     IU_Manager iu_Manager = GameObject.Find("Canvas").GetComponent<IU_Manager>();
                     if(iu_Manager != null)

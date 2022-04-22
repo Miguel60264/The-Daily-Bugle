@@ -16,7 +16,8 @@ public class Collectable_Gato : MonoBehaviour
                 Player player = other.GetComponent<Player>();
                 if (player != null)
                 {
-                    player.hasCoin = true;
+                    player.hasCat = true;
+                    player.currentCollectables = player.currentCollectables + 1;
                     AudioSource.PlayClipAtPoint(_collectableGatoPickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
                 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -29,8 +30,12 @@ public class Player : MonoBehaviour
 
     private IU_Manager _uiManager;
 
-    public bool hasCoin = false;
-    
+    public bool hasMaster = false;
+
+    public bool hasCat = false;
+
+    public bool hasBear = false;
+
     [SerializeField]
     private GameObject _weapon;
 
@@ -44,6 +49,8 @@ public class Player : MonoBehaviour
     public bool inmunity = false;
 
     public bool speed = false;
+
+    public int currentCollectables = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -86,12 +93,22 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
         
-        if(hasCoin==true)
+        if (hasMaster == true)
         {
-            _uiManager.CollectCoin();
+            _uiManager.CollectMaestro();
         }
-        
-        if(Input.GetKeyDown(KeyCode.L))
+
+        if (hasCat == true)
+        {
+            _uiManager.CollectGato();
+        }
+
+        if (hasBear == true)
+        {
+            _uiManager.CollectPeluche();
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
         {    
             if(weaponActive==false)
                  EnableWeapons();
@@ -220,8 +237,9 @@ public class Player : MonoBehaviour
             timeToDie = 0.0f;
             Debug.Log("Time to die: " + timeToDie);
         }
-        if (playerLife == 0)
-        {   
+        if (playerLife <= 0)
+        {
+            SceneManager.LoadScene(2);
             Debug.Log("GAME OVER");
         }
     }
@@ -253,5 +271,14 @@ public class Player : MonoBehaviour
         speed = false;
         _speed = 3.5f;
         yield return new WaitForSeconds(.1f);
+    }
+
+    public void Win()
+    {
+        if (currentCollectables == 12)
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Ganaste");
+        }
     }
 }

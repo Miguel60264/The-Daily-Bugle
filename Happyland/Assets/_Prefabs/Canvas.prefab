@@ -117,7 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textAmmoText: {fileID: 2850018718642030009}
-  coin: {fileID: 2850018718572502034}
+  maestro: {fileID: 9050931467786097928, guid: d857f209aed302746a03110e4987891e, type: 3}
+  gato: {fileID: 1336511720838991297, guid: 352c562ecffeab6418d12ce18f10945e, type: 3}
+  peluche: {fileID: 3920402837330273006, guid: a7737e088a1cbcc4caf155e9fe5feb12, type: 3}
 --- !u!1 &2850018718217169857
 GameObject:
   m_ObjectHideFlags: 0

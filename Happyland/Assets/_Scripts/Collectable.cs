@@ -17,10 +17,10 @@ public class Collectable : MonoBehaviour
                 Player player = other.GetComponent<Player>();
                 if (player != null)
                 {
-                    player.hasCoin = true;
+                    player.hasMaster = true;
+                    player.currentCollectables = player.currentCollectables = +1;
                     AudioSource.PlayClipAtPoint(_heartPickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
-
                 }
             }
         }

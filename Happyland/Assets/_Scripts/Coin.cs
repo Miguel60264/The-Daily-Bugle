@@ -15,9 +15,10 @@ public class Coin : MonoBehaviour
           { 
                Player player = other.GetComponent<Player>();
                 if(player != null)
-                { 
-                   player.hasCoin=true; 
-                   AudioSource.PlayClipAtPoint(_coinPickUpSound, transform.position, 1f);
+                {
+                    player.hasMaster = true;
+                    player.currentCollectables = player.currentCollectables = +1;
+                    AudioSource.PlayClipAtPoint(_coinPickUpSound, transform.position, 1f);
                    Destroy(this.gameObject);
                 }
           }

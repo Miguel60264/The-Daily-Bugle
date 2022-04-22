@@ -16,7 +16,8 @@ public class Collectable_Peluche : MonoBehaviour
                 Player player = other.GetComponent<Player>();
                 if (player != null)
                 {
-                    player.hasCoin = true;
+                    player.hasBear = true;
+                    player.currentCollectables = player.currentCollectables + 1;
                     AudioSource.PlayClipAtPoint(_collectablePeluchePickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
                 }

@@ -3,7 +3,11 @@ guid: 8eaeb564423aeb74094044b921aa1e57
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _textAmmoText: {instanceID: 0}
+  - maestro: {fileID: 9050931467786097928, guid: d857f209aed302746a03110e4987891e, type: 3}
+  - gato: {fileID: 1336511720838991297, guid: 352c562ecffeab6418d12ce18f10945e, type: 3}
+  - peluche: {fileID: 3920402837330273006, guid: a7737e088a1cbcc4caf155e9fe5feb12, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

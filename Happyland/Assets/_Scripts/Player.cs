@@ -277,7 +277,7 @@ public class Player : MonoBehaviour
     {
         if (currentCollectables == 12)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
             Debug.Log("Ganaste");
         }
     }

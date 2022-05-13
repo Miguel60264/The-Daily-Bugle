@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
     public bool speed = false;
 
-    public int currentCollectables = 0;
+    public float currentCollectables = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -273,8 +273,9 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(.1f);
     }
 
-    public void Win()
+    public void AddCollectable(float collectable)
     {
+        currentCollectables = currentCollectables + collectable;
         if (currentCollectables == 12)
         {
             SceneManager.LoadScene(3);

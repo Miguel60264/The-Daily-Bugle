@@ -6,6 +6,7 @@ public class Collectable_Gato : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _collectableGatoPickUpSound;
+    private float collectable = 1.0f;
 
     public void OnTriggerStay(Collider other)
     {
@@ -17,7 +18,7 @@ public class Collectable_Gato : MonoBehaviour
                 if (player != null)
                 {
                     player.hasCat = true;
-                    player.currentCollectables = player.currentCollectables + 1;
+                    player.AddCollectable(collectable);
                     AudioSource.PlayClipAtPoint(_collectableGatoPickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
                 }

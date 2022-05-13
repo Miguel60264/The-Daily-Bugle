@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be26bf1bffe754747b8da37ed7504836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Forest_Scene
+  sceneToLoad: Tutorial
 --- !u!1 &995588572
 GameObject:
   m_ObjectHideFlags: 0

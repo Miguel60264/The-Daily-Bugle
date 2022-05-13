@@ -6,6 +6,7 @@ public class Collectable_Maestro : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _collectableMaestroPickUpSound;
+    private float collectable = 1.0f;
 
     public void OnTriggerStay(Collider other)
     {
@@ -17,7 +18,7 @@ public class Collectable_Maestro : MonoBehaviour
                 if (player != null)
                 {
                     player.hasMaster = true;
-                    player.currentCollectables = player.currentCollectables + 1;
+                    player.AddCollectable(collectable);
                     AudioSource.PlayClipAtPoint(_collectableMaestroPickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
                 }

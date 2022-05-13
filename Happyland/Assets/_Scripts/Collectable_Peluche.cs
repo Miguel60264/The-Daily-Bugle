@@ -6,6 +6,7 @@ public class Collectable_Peluche : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _collectablePeluchePickUpSound;
+    private float collectable = 1.0f;
 
     public void OnTriggerStay(Collider other)
     {
@@ -17,7 +18,7 @@ public class Collectable_Peluche : MonoBehaviour
                 if (player != null)
                 {
                     player.hasBear = true;
-                    player.currentCollectables = player.currentCollectables + 1;
+                    player.AddCollectable(collectable);
                     AudioSource.PlayClipAtPoint(_collectablePeluchePickUpSound, transform.position, 1f);
                     Destroy(this.gameObject);
                 }

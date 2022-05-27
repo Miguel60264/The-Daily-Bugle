@@ -156,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 756858024}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000091553, y: 18}
-  m_SizeDelta: {x: 793.8328, y: 131.9079}
+  m_AnchorMin: {x: 0.29343745, y: 0.45548353}
+  m_AnchorMax: {x: 0.7054582, y: 0.5777127}
+  m_AnchoredPosition: {x: 1.0000916, y: 0}
+  m_SizeDelta: {x: 1.8328247, y: -0.09210205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483049549
 MonoBehaviour:
@@ -507,10 +507,10 @@ RectTransform:
   m_Father: {fileID: 756858024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000071975, y: -0.000035988}
-  m_SizeDelta: {x: 2617, y: 1796}
+  m_AnchorMin: {x: 0.13070834, y: 0.16722135}
+  m_AnchorMax: {x: 0.8721667, y: 0.82963115}
+  m_AnchoredPosition: {x: -2.999939, y: 1.4999695}
+  m_SizeDelta: {x: 1193, y: 1081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954274440
 MonoBehaviour:
@@ -653,10 +653,10 @@ RectTransform:
   m_Father: {fileID: 756858024}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -156.046}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.27781233, y: 0.29700002}
+  m_AnchorMax: {x: 0.72200006, y: 0.41370487}
+  m_AnchoredPosition: {x: 0.5, y: -0.04600525}
+  m_SizeDelta: {x: -693, y: -96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1340805505
 MonoBehaviour:
@@ -798,10 +798,10 @@ RectTransform:
   m_Father: {fileID: 756858024}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000022888, y: 154.29599}
-  m_SizeDelta: {x: 1112.689, y: 140.6838}
+  m_AnchorMin: {x: 0.21010418, y: 0.5777127}
+  m_AnchorMax: {x: 0.78885406, y: 0.711336}
+  m_AnchoredPosition: {x: 1, y: -1.70401}
+  m_SizeDelta: {x: 0.68896484, y: -3.3161926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412802164
 MonoBehaviour:
@@ -1095,7 +1095,7 @@ AudioSource:
   m_GameObject: {fileID: 1731349129}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: b65b1195b8c8f3e4387d7e5b486226f8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9399b82239dbc104cad00e9189bbd20f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

@@ -2,31 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu (fileName = "Nuevo item", menuName = "Inventory/Item")]
+public class Item : ScriptableObject
 {
-    public int ID;
-    public string type;
-    public string description;
-    public Sprite icon;
-
-    [HideInInspector]
-    public bool pickedUp;
-
-    [HideInInspector]
-    public bool equipped;
-
-    private void Update()
-    {
-        if (equipped)
-        {
-
-        }
-    }
-    public void ItemUsage()
-    {
-        if (type == "Weapon")
-        {
-            equipped = true;
-        }
-    }
+    new public string name = "Nuevo item";
+    public Sprite icon = null;
+    public bool isDefaultItem = false;
 }

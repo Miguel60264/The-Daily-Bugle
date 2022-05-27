@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3343981469524449502}
   - component: {fileID: 688138302962707476}
   - component: {fileID: 2183497626468991681}
-  - component: {fileID: 2014973260234577116}
+  - component: {fileID: 5011045752822599072}
   m_Layer: 0
   m_Name: Gato
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0.05, y: -0.25, z: 0.39}
---- !u!114 &2014973260234577116
+--- !u!114 &5011045752822599072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1336511720838991297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac32cbb7cbf54545a31e13013999bf9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e42f4dd5068e9c4bb186059a7bf54ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 754ff1650c37ed047aa565ca13489953, type: 2}
   _collectableGatoPickUpSound: {fileID: 8300000, guid: 59dae426149370d40abd6b86b674ebb8, type: 3}

@@ -10,9 +10,9 @@ public class Player : MonoBehaviour
 
     private float timeToDie = 0.0f;
 
-    public float playerLife = 100;     
+    public float playerLife = 100;
     [SerializeField]
-    private float _speed =3.5f;
+    private float _speed = 3.5f;
     [SerializeField]
     private float _gravity = 9.81f;
     [SerializeField]
@@ -42,15 +42,17 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _knife;
 
-    public bool knifeActive=false;
+    public bool knifeActive = false;
 
-    public bool weaponActive=true;
+    public bool weaponActive = true;
 
     public bool inmunity = false;
 
     public bool speed = false;
 
     public float currentCollectables = 0;
+
+    public bool gamepause;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +63,8 @@ public class Player : MonoBehaviour
         //Inicia la cantidad de balas
         currentAmmo = maxAmmo;
         _uiManager = GameObject.Find("Canvas").GetComponent<IU_Manager>();
-        _uiManager.UpdateAmmo(currentAmmo);        
+        _uiManager.UpdateAmmo(currentAmmo);
+        gamepause = false;
 
     }
 
@@ -85,13 +88,18 @@ public class Player : MonoBehaviour
             _isReLoading = true;
             StartCoroutine(Reload());
         }
-        
-        CalculateMovement();
-        if(Input.GetKeyDown(KeyCode.Escape))
-        { 
-            Cursor.visible= true;
-            Cursor.lockState = CursorLockMode.None;
+        if (gamepause == false)
+        {
+            CalculateMovement();
+            Debug.Log("Entrando");
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
         }
+       
         
         if (hasMaster == true)
         {
@@ -177,6 +185,7 @@ public class Player : MonoBehaviour
         //Convertir el vector velocity en world space. Toma los valores de velocity en local space y pasalos a world space y nuevamente asignalos
         velocity = transform.transform.TransformDirection(velocity);
         _controller.Move(velocity * Time.deltaTime);
+        Debug.Log("Calculando");
     }
 
     public void RestLife(float injury)
@@ -226,6 +235,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void LessHealth(float heal)
+    {
+        playerLife = playerLife - heal;
+        if (playerLife <= 0)
+        {
+            SceneManager.LoadScene(2);
+            Debug.Log("GAME OVER");
+        }
+    }
+
     public void RemoveHealth(float heal)
     {
         //playerLife = playerLife - heal
@@ -239,8 +258,10 @@ public class Player : MonoBehaviour
         }
         if (playerLife <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
             Debug.Log("GAME OVER");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -278,8 +299,10 @@ public class Player : MonoBehaviour
         currentCollectables = currentCollectables + collectable;
         if (currentCollectables == 12)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
             Debug.Log("Ganaste");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

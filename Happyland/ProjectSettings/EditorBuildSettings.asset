@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scenes/Start.unity
+    guid: 335b3800b54c7fd4e9f1bf0300af1dd9
+  - enabled: 1
     path: Assets/_Scenes/StartWindow.unity
     guid: d49fc5912d6bba34a925cf57f9312d6c
+  - enabled: 1
+    path: Assets/_Scenes/Tutorial.unity
+    guid: 2647d35afb594d340a1a43db621ecdfb
   - enabled: 1
     path: Assets/_Scenes/Forest_Scene.unity
     guid: a6f078be1ad32f34b913bcf0d86c0d1e
@@ -17,10 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/YouWin.unity
     guid: 574f8d2c1d60ee64c8463bd125841939
-  - enabled: 1
-    path: Assets/_Scenes/SettingsMenu.unity
-    guid: fc128604f49508e4bb566398d1170afc
-  - enabled: 1
-    path: Assets/_Scenes/Tutorial.unity
-    guid: 2647d35afb594d340a1a43db621ecdfb
   m_configObjects: {}

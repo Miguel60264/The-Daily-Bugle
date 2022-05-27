@@ -32,23 +32,31 @@ public class Visibilidad_Vida : MonoBehaviour
             distorsion.intensity.value = 0f;
             Debug.Log("100");
         }
-        else if (valorvida >= 70 && valorvida < 100)
+        else if (valorvida >= 75 && valorvida < 100)
         {
             _vol.profile.TryGet(out injury);
-            injury.intensity.value = 0.33f;
+            injury.intensity.value = 0.2f;
             _vol.profile.TryGet(out distorsion);
-            distorsion.intensity.value = 0.33f;
-            Debug.Log("70");
+            distorsion.intensity.value = 0.25f;
+            Debug.Log("75");
         }
-        else if (valorvida >= 40 && valorvida < 70)
+        else if (valorvida >= 50 && valorvida < 75)
         {
             _vol.profile.TryGet(out injury);
-            injury.intensity.value = 0.33f;
+            injury.intensity.value = 0.4f;
             _vol.profile.TryGet(out distorsion);
-            distorsion.intensity.value = 0.66f;
-            Debug.Log("40");
+            distorsion.intensity.value = 0.5f;
+            Debug.Log("50");
         }
-        else if (valorvida >= 10 && valorvida < 40)
+        else if (valorvida >= 25 && valorvida < 50)
+        {
+            _vol.profile.TryGet(out injury);
+            injury.intensity.value = 0.8f;
+            _vol.profile.TryGet(out distorsion);
+            distorsion.intensity.value = 0.75f;
+            Debug.Log("25");
+        }
+        else if (valorvida >= 10 && valorvida < 25)
         {
             _vol.profile.TryGet(out injury);
             injury.intensity.value = 1f;

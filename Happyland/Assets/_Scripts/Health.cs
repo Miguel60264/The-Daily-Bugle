@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
 
     void ColorChanger()
     {
-        Color healthColor = Color.Lerp(Color.red, Color.green, (currentHealth / maxHealth));
+        Color healthColor = Color.Lerp(Color.red, Color.white, (currentHealth / maxHealth));
         healthBar.color = healthColor;
     }
 }

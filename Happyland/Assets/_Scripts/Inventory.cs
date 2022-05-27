@@ -4,93 +4,51 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private bool inventoryEnabled;
+    #region Singleton
 
-    public GameObject inventory;
+    public static Inventory Instance;
 
-    private int allSlots;
-
-    private int enabledSlots;
-
-    private GameObject[] slot;
-
-    public GameObject slotHolder;
-
-    void Start()
+    private void Awake()
     {
-        allSlots = slotHolder.transform.childCount;
-
-        slot = new GameObject[allSlots];
-
-        for (int i = 0; i < allSlots; i++)
+        if (Instance != null)
         {
-            slot[i] = slotHolder.transform.GetChild(i).gameObject;
+            Debug.LogWarning("Más de una instancia de inventario encontrada");
+            return;
+        }
+        Instance = this;
+    }
 
-            if (slot[i].GetComponent<Slot>().item == null)
+    #endregion
+
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallBack;
+    
+    public int space = 12;
+
+    public List<Item> items = new List<Item>();
+
+    public bool Add (Item item)
+    {
+        if (!item.isDefaultItem)
+        {
+            if (items.Count > space)
             {
-                slot[i].GetComponent<Slot>().empty = true;
+                Debug.Log("No hay suficiente espacio");
+                return false;
             }
+            items.Add(item);
+
+            if(onItemChangedCallBack != null)
+                onItemChangedCallBack.Invoke();
         }
+        return true;
     }
 
-    void Update()
+    public void Remove (Item item)
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            inventoryEnabled = !inventoryEnabled;
-        }
+        items.Remove (item);
 
-        if (inventoryEnabled == true)
-        {
-            inventory.SetActive(true);
-        }
-        else
-        {
-            inventory.SetActive(false);
-        }
+        if (onItemChangedCallBack != null)
+            onItemChangedCallBack.Invoke();
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Item")
-        {
-            GameObject itemPickedUp = other.gameObject;
-
-            Item item = itemPickedUp.GetComponent<Item>();
-
-            AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
-        }
-    }
-
-    public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
-    {
-        for (int i = 0; i < allSlots; i++)
-        {
-            if (slot[i].GetComponent<Slot>().empty)
-            {
-                itemObject.GetComponent<Item>().pickedUp = true;
-
-                slot[i].GetComponent<Slot>().item = itemObject;
-                slot[i].GetComponent<Slot>().ID = itemID;
-                slot[i].GetComponent<Slot>().type = itemType;
-                slot[i].GetComponent<Slot>().description = itemDescription;
-                slot[i].GetComponent<Slot>().icon = itemIcon;
-
-                itemObject.transform.parent = slot[i].transform;
-                itemObject.SetActive(false);
-
-
-                slot[i].GetComponent<Slot>().UpdateSlot();
-
-
-                slot[i].GetComponent<Slot>().empty = false;
-
-                return;
-
-            }
-            
-        }
-    }
-
-
 }

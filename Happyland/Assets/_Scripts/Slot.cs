@@ -13,21 +13,18 @@ public class Slot : MonoBehaviour
     public bool empty;
     public Sprite icon;
 
-    public Transform slotIconGameObject;
+    public GameObject slotIconGameObject;
 
     private void Start()
     {
-        slotIconGameObject = transform.GetChild(0);
+
+        slotIconGameObject.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
     }
 
     public void UpdateSlot()
     {
+        slotIconGameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
         slotIconGameObject.GetComponent<Image>().sprite = icon;
+       
     }
-
-    public void UseItem()
-    {
-
-    }
-    
 }

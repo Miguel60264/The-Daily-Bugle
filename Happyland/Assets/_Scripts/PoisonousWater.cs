@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Audio;
 using UnityEngine.Rendering.Universal;
 
 public class PoisonousWater : MonoBehaviour
@@ -17,6 +18,8 @@ public class PoisonousWater : MonoBehaviour
     private Vignette injury;
 
     public Color colordaño;
+
+    public AudioMixer audioMixer;
 
     public void OnTriggerStay(Collider other)
     {

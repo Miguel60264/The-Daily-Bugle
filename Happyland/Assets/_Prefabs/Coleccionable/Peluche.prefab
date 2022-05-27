@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 760011720797091825}
   - component: {fileID: 3272126726233031483}
   - component: {fileID: 4227041985529909200}
-  - component: {fileID: 4093231126960201206}
+  - component: {fileID: 4527952207195325773}
   m_Layer: 0
   m_Name: Peluche
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0.01, y: -0.78, z: 0.52}
---- !u!114 &4093231126960201206
+--- !u!114 &4527952207195325773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3920402837330273006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b156b6fe19ef6254085e41b9debf5e59, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fcc19c8abf40ed468a9968fadcd18a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 6ff066a6c6b05384f9a592470902fa6c, type: 2}
   _collectablePeluchePickUpSound: {fileID: 8300000, guid: e32dccb957fb9e34cb482b4521348361, type: 3}

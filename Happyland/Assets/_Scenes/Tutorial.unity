@@ -790,9 +790,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Avanza con las teclas WASD.
+  m_text: 'Pausa y continua con Esc.
 
-    Recoge los objetos con la tecla E.
+    Avanza con las teclas WASD.
+
+    Recoge
+    los objetos con la tecla E.
+
+    Abre y cierra el inventario con la tecla I.
 
     Evita
     el lago, las alcantarillas y los arboles del panico.'
@@ -822,7 +827,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.55
+  m_fontSize: 32.9
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
